@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 50px;
-    margin: 50px 7vw 0px 15vw;
+    margin: 50px 3vw 0px 3vw;
 }
 
 .skill-container .skill-header {
@@ -16,23 +16,29 @@
 
 .skill-container .skill-box {
     width: 100%;
+    overflow: hidden; /* Ensures smooth marquee scroll */
 }
 
-.skill-box h2 {
-    color: #fff;
-    letter-spacing: 2px;
-    word-spacing: 3px;
-}
-
-.skill-box .skillset {
-    margin: 25px 0 50px;
+/* Marquee scrolling container */
+.skillset {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 20px 40px; /* Increased space between the icons */
     align-items: center;
-    gap: 10px 25px;
+    animation: marquee 15s linear infinite; /* Marquee animation */
+    padding: 20px 0; /* Added top and bottom padding */
 }
 
+/* Marquee scrolling keyframes */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Individual icon styles */
 .techLogo {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 15px;
@@ -43,22 +49,22 @@
     cursor: pointer;
 }
 
-.skill-box .skillset abbr .techLogo:hover{
+.skill-box .skillset abbr .techLogo:hover {
     border: 2px solid rgb(255, 255, 255);
     box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.4);
     transform: scale(1.15);
 }
 
+/* Responsive styles */
 @media screen and (max-width: 1040px), (max-height: 550px) {
-
     .skill-container {
-        margin: 50px 7vw 0px 20vw;
+        margin: 50px 3vw 0px 3vw;
     }
 }
 
 @media screen and (max-width: 750px) {
     .skill-container {
-        padding-top:  80px;
+        padding-top: 80px;
         margin: 0 50px 0px;
     }
 

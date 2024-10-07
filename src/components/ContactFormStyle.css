@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+.btn#submitBtn {
+    margin-left: 230px;
+}
+
 .contact-window h1 {
     color: #fff;
     font-size: 50px;
